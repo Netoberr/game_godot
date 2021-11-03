@@ -1,0 +1,52 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://assets/img/settings(nopresssed).png" type="Texture" id=1]
+[ext_resource path="res://assets/fases/elevador05fechado.png" type="Texture" id=2]
+[ext_resource path="res://assets/musics/musicmenu.wav" type="AudioStream" id=3]
+[ext_resource path="res://scenes/level_one.gd" type="Script" id=4]
+[ext_resource path="res://assets/img/setings(pressed).png" type="Texture" id=5]
+[ext_resource path="res://assets/img/comeback(nopressed).png" type="Texture" id=7]
+[ext_resource path="res://assets/img/comeback(pressed).png" type="Texture" id=8]
+
+[node name="level_one" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 3 )
+
+[node name="bg" type="Sprite" parent="."]
+position = Vector2( 178.78, 322.176 )
+scale = Vector2( 1.00991, 0.999175 )
+texture = ExtResource( 2 )
+
+[node name="comebackfs1" type="TouchScreenButton" parent="."]
+position = Vector2( 5.3652, 540.55 )
+scale = Vector2( 0.231035, 0.268834 )
+normal = ExtResource( 7 )
+pressed = ExtResource( 8 )
+
+[node name="settingsfs1" type="TouchScreenButton" parent="."]
+position = Vector2( 258, 544.648 )
+scale = Vector2( 0.248139, 0.255814 )
+normal = ExtResource( 1 )
+pressed = ExtResource( 5 )
+
+[node name="Control" type="Control" parent="."]
+margin_left = 55.0
+margin_top = 402.0
+margin_right = 346.0
+margin_bottom = 451.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LineEdit" type="LineEdit" parent="Control"]
+margin_left = 9.0
+margin_top = 7.0
+margin_right = 200.0
+margin_bottom = 44.0
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="Control"]
+position = Vector2( 224.632, 24.0065 )
+[connection signal="pressed" from="comebackfs1" to="." method="_on_comebackfs1_pressed"]
+[connection signal="pressed" from="settingsfs1" to="." method="_on_settingsfs1_pressed"]

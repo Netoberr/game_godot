@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scenes/proxima fase.png" type="Texture" id=1]
+[ext_resource path="res://assets/background.jpg" type="Texture" id=2]
+[ext_resource path="res://scenes/gif parte 3.png" type="Texture" id=3]
+
+[node name="Historia" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 707.0
+margin_bottom = 1256.0
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 103.212
+margin_top = 172.95
+margin_right = 1179.21
+margin_bottom = 557.95
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Eu estou precisando de alguém que me ajude a encontrar o meu tesouro precioso"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 337.531, 627.639 )
+texture = ExtResource( 3 )
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="."]
+position = Vector2( 100.422, 934.485 )
+scale = Vector2( 0.562633, 0.531478 )
+normal = ExtResource( 1 )

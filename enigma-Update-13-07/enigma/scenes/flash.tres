@@ -1,0 +1,30 @@
+[gd_resource type="Animation" format=2]
+
+[resource]
+resource_name = "flash"
+length = 3.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Control:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 2, 2.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -32.1991, -45.4416 ), Vector2( 43.0499, -45.4416 ), Vector2( 803.05, -45.4416 ), Vector2( 13.8026, -45.4416 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Control:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 2.1, 2.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0.368627 ), Color( 1, 1, 1, 0.368627 ), Color( 1, 1, 1, 0 ) ]
+}
